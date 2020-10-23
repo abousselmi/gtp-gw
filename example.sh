@@ -38,7 +38,7 @@ function log {
 
 function print_test_msg {
   echo ""
-  echo "You can go for e.g.:"
+  echo "You can do for e.g.:"
   echo "  $NS1_EXEC ping $NS2_LO_IP"
   echo "  $NS2_EXEC ping $NS1_LO_IP"
   echo ""
