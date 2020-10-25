@@ -34,13 +34,13 @@ cd tools
 Now you can run the example and enjoy:
 
 ```console
-./example start
+./example.sh start
 ```
 
 To destroy everything, you can do:
 
 ```console
-./example stop
+./example.sh stop
 ```
 
 ## Sample output
