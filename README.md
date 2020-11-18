@@ -1,4 +1,4 @@
-# Simple GTP tunnel example
+# Simple GTP Gateway example
 
 This example make use of libgtpnl from osmocom to create a GTP tunnel
 and send some traffic.
