@@ -8,8 +8,8 @@ and send some traffic.
 First, get the example:
 
 ```console
-git clone https://github.com/abousselmi/gtp-example.git
-cd gtp-example
+git clone https://github.com/abousselmi/gtp-gw.git
+cd gtp-gw
 ```
 
 Second, you need to clone libgtpnl and compile it:
