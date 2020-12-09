@@ -70,7 +70,9 @@ Using tshark you will see ICMP pckets encapsulated in GTP
 
 ## Credits
 
-Reference: [Kentaro Ebisawa](https://www.slideshare.net/kentaroebisawa/using-gtp-on-linux-with-libgtpnl)
+- [Kentaro Ebisawa libgtpnl (gtpc) tutorial](https://www.slideshare.net/kentaroebisawa/using-gtp-on-linux-with-libgtpnl)
+- [osmocom gtpu](https://osmocom.org/projects/linux-kernel-gtp-u/wiki)
+- [osmocom gtpc](https://osmocom.org/projects/linux-kernel-gtp-u/wiki/Libgtpnl)
 
 ## License
 
