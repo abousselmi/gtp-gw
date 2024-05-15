@@ -79,6 +79,3 @@ Using tshark you will see ICMP pckets encapsulated in GTP
 - [osmocom gtpu](https://osmocom.org/projects/linux-kernel-gtp-u/wiki)
 - [osmocom gtpc](https://osmocom.org/projects/linux-kernel-gtp-u/wiki/Libgtpnl)
 
-## License
-
-MIT
