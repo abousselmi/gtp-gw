@@ -27,4 +27,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: ${{ github.actor }}/gtpgw:latest
+          tags: ghcr.io/${{ github.actor }}/gtpgw:latest
