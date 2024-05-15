@@ -32,26 +32,26 @@ sudo ldconfig
 Now we need to copy the example script where we have the gtp wrappers:
 
 ```console
-cp ../example.sh ./tools
+cp ../gtpgw.sh ./tools
 cd tools
 ```
 
 Now you can run the example and enjoy:
 
 ```console
-./example.sh start
+./gtpgw.sh start
 ```
 
 To destroy everything, you can do:
 
 ```console
-./example.sh stop
+./gtpgw.sh stop
 ```
 
 ## Sample output
 
 ```console
-./example.sh start
+./gtpgw.sh start
 [INFO] create veth pairs
 [INFO] create network namespaces
 [INFO] attribute each veth pair to its correspondent netns
