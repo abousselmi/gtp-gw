@@ -3,6 +3,12 @@
 This example make use of libgtpnl from osmocom to create a GTP tunnel
 and send some traffic.
 
+## Install dependencies
+
+```console
+apt-get update && apt-get install -y autoconf libtool pkg-config
+```
+
 ## Setup
 
 First, get the example:
@@ -18,8 +24,7 @@ Second, you need to clone libgtpnl and compile it:
 git clone https://git.osmocom.org/libgtpnl
 cd libgtpnl
 autoreconf -fi
-./configure
-make
+./configure && make
 sudo make install
 sudo ldconfig
 ```

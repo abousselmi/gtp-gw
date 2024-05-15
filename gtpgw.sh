@@ -1,6 +1,12 @@
 #!/bin/bash
 
+# GTP-link usage: Usage: %s add <device> <family> [--sgsn] [<address>]
+# [--sgsn] [<address>] are optional
+
 ## Configuration
+
+# Can be: ip, ip6
+IP_VERSION="ip"
 
 NS1=100
 NS2=200
@@ -72,8 +78,8 @@ function start {
   $NS2_EXEC ip link set lo up
 
   log "create gtp devices (run in bg mode)"
-  $NS1_EXEC ./gtp-link add $GTP_DEV1 &
-  $NS2_EXEC ./gtp-link add $GTP_DEV2 &
+  $NS1_EXEC ./gtp-link add $GTP_DEV1 $IP_VERSION &
+  $NS2_EXEC ./gtp-link add $GTP_DEV2 $IP_VERSION &
 
   log "configure mtu of gtp devices"
   $NS1_EXEC ifconfig $GTP_DEV1 mtu 1500 up
