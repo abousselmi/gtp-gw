@@ -71,6 +71,9 @@ start() {
 stop() {
     log "stopping gtp-gw.."
 
+    log "delete loopback UE IP config"
+    ip addr del $UE_IP/32 dev lo
+
     log "delete gtp-tunnel"
     gtp-tunnel del $GTP_DEV v1 $TEID_N3_UPF $IP_VERSION
 
