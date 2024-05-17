@@ -48,7 +48,7 @@ start() {
     ip link set mtu $MTU dev $GTP_DEV
 
     log "create gtp tunnel"
-    gtp-tunnel add $GTP_DEV v1 $TEID_N3_UPF $TEID_N3_GNB $UE_IP $N3_UPF_IP
+    gtp-tunnel add $GTP_DEV v1 $TEID_N3_UPF $TEID_N3_GNB $N6_APP_SERVER_IP $N3_UPF_IP
 
     sleep 1
 
@@ -66,6 +66,7 @@ start() {
     log "------------------------------------------------------------------------"
     log "$(gtp-tunnel list)"
     log "------------------------------------------------------------------------"
+    log "You can run: ping $N6_APP_SERVER_IP"
 }
 
 stop() {
