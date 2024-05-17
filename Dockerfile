@@ -8,19 +8,22 @@ RUN git clone https://gitea.osmocom.org/cellular-infrastructure/libgtpnl \
 
 FROM alpine:3.19
 
-WORKDIR /nf-gtp-gw
+WORKDIR /gw
 
 COPY --from=buildenv /libgtpnl/src/.libs/libgtpnl.so* /usr/lib/
-COPY --from=buildenv /libgtpnl/tools/.libs/* .
+COPY --from=buildenv /libgtpnl/tools/.libs/* /usr/bin/
 COPY ./startup.sh ./
 
-RUN apk add --no-cache libmnl iproute2 \
+RUN apk add --no-cache libmnl iproute2 tcpdump figlet \
 	&& ldconfig /
 
-ENV TEID_N3_GNB=100 \
+ENV UE_IP=10.10.10.1 \
+    TEID_N3_GNB=100 \
     TEID_N3_UPF=200 \
-    N3_UPF_IP=127.0.0.1 \
-    N6_APP_SERVER_IP=127.0.0.2 \
-    N6_APP_SERVER_SUBNET=127.0.0.0/8
+    N3_GNB_IP=127.0.0.2 \
+    N3_UPF_IP=127.0.0.3 \
+    N6_APP_SERVER_IP=127.0.0.4
 
-ENTRYPOINT ["./startup.sh"]
+EXPOSE 2152
+
+CMD ["/bin/sh"]
